@@ -14,17 +14,20 @@ module.exports = (sequelize, DataTypes) => {
       });
     } 
   }
-  Tasks.init({
-    title: DataTypes.STRING,
-    description: DataTypes.STRING,
-    dueDate: DataTypes.DATE,
-    priority: DataTypes.BOOLEAN,
-    userId: DataTypes.INTEGER,
-    categoryId: DataTypes.INTEGER,
-    isCompleted: DataTypes.BOOLEAN
-  }, {
-    sequelize,
-    modelName: 'Tasks',
-  });
+  Tasks.init(
+    {
+      title: DataTypes.STRING,
+      description: DataTypes.STRING,
+      dueDate: DataTypes.DATE,
+      priority: DataTypes.BOOLEAN,
+      userId: DataTypes.INTEGER,
+      categoryId: DataTypes.INTEGER,
+      isCompleted: DataTypes.BOOLEAN,
+    },
+    {
+      sequelize,
+      modelName: "Tasks",
+    }
+  );
   return Tasks;
 };
