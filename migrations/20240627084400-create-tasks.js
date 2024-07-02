@@ -21,15 +21,6 @@ module.exports = {
       priority: {
         type: Sequelize.BOOLEAN,
       },
-      userId: {
-        type: Sequelize.INTEGER,
-        references: {
-          model: "Users",
-          key: "id",
-        },
-        onUpdate: "CASCADE",
-        onDelete: "SET NULL",
-      },
       categoryId: {
         type: Sequelize.INTEGER,
         references: {

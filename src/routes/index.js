@@ -1,8 +1,8 @@
 const express = require("express");
+const tasksRouter = require("./tasks");
+
 const router = express.Router();
 
-router.get("/", (req, res) => {
-  res.json({ message: "Hello World!" });
-});
+router.use("/api/", tasksRouter);
 
 module.exports = router;
